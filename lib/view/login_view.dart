@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:nuntium/utils/global_colors.dart';
 import 'package:nuntium/view/widgets/button_global.dart';
+import 'package:nuntium/view/widgets/forgot_password.dart';
 import 'package:nuntium/view/widgets/social_login.dart';
 import 'package:nuntium/view/widgets/text_form_global.dart';
 
@@ -68,6 +69,35 @@ class LoginView extends StatelessWidget {
                         text: AutofillHints.password, textInputType: TextInputType.text,
                         obscure: true, inputType: TextInputType.text,
                         ),
+
+                    const SizedBox(height: 10),
+
+                    Padding(
+                      padding: const EdgeInsets.symmetric(horizontal: 25.0),
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.end,
+                        children:  [
+                          GestureDetector(
+                            onTap: (){
+                              Navigator.push(context, MaterialPageRoute(builder: (context) {
+                                return ForgotPasswordPage();
+
+                              },
+                              ),
+                              );
+                              },
+
+                            child: Text(
+                                'Forgot Password?',
+                              style: TextStyle(
+                                color: Colors.blue,
+                                fontWeight: FontWeight.bold
+                              ),
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
                     const SizedBox(height: 10),
                       const ButtonGlobal(),
                     const SizedBox(height: 15),
