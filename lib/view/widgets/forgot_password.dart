@@ -87,7 +87,7 @@ class ForgotPasswordPageState extends State<ForgotPasswordPage> {
                   borderRadius: BorderRadius.circular(10),
                 ),
                 hintText: 'Email Address',
-                fillColor: Colors.grey[300],
+                fillColor: Colors.grey[100],
                 filled: true
               ),
 

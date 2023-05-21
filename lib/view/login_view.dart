@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:nuntium/utils/global_colors.dart';
 import 'package:nuntium/view/widgets/button_global.dart';
 import 'package:nuntium/view/widgets/forgot_password.dart';
+import 'package:nuntium/view/widgets/signup_page.dart';
 import 'package:nuntium/view/widgets/social_login.dart';
 import 'package:nuntium/view/widgets/text_form_global.dart';
 
@@ -59,7 +60,8 @@ class LoginView extends StatelessWidget {
                         controller: emailController,
                       text: 'Email',
                       obscure: false,
-                      textInputType: TextInputType.emailAddress, inputType: TextInputType.text,
+                      textInputType: TextInputType.emailAddress,
+                      inputType: TextInputType.text,
                     ),
 
                     const SizedBox(height: 10),
@@ -87,7 +89,7 @@ class LoginView extends StatelessWidget {
                               );
                               },
 
-                            child: Text(
+                            child: const Text(
                                 'Forgot Password?',
                               style: TextStyle(
                                 color: Colors.blue,
@@ -119,10 +121,19 @@ class LoginView extends StatelessWidget {
             Text('Don\'t have an account?',
             ),
             InkWell(
-              child: Text(
-                  ' Sign Up',
-                style: TextStyle(
-                  color: GlobalColors.mainColor,
+              child: GestureDetector(
+                onTap: () {
+                  Navigator.push(context, MaterialPageRoute(builder: (context){
+                    return SignUpPage();
+                  },
+                  ),
+                  );
+                },
+                child: Text(
+                    ' Sign Up',
+                  style: TextStyle(
+                    color: GlobalColors.mainColor,
+                  ),
                 ),
               ),
             ),
