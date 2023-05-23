@@ -1,5 +1,6 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
+import 'package:nuntium/view/otp_screen.dart';
 
 import '../../utils/global_colors.dart';
 
@@ -95,7 +96,13 @@ class ForgotPasswordPageState extends State<ForgotPasswordPage> {
             const SizedBox(height: 10),
             Container(
               child: MaterialButton(
-                onPressed: (){},
+                onPressed: (){
+                  Navigator.push(context, MaterialPageRoute(builder: (context) {
+                    return OTPScreen();
+                  },
+                  ),
+                  );
+                },
                 child: Text('Next'),
               ),
               alignment: Alignment.center,
