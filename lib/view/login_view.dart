@@ -4,6 +4,7 @@ import 'package:nuntium/view/widgets/button_global.dart';
 import 'package:nuntium/view/widgets/forgot_password.dart';
 import 'package:nuntium/view/widgets/signup_page.dart';
 import 'package:nuntium/view/widgets/social_login.dart';
+import 'package:nuntium/view/widgets/text_form.dart';
 import 'package:nuntium/view/widgets/text_form_global.dart';
 
 class LoginView extends StatelessWidget {
@@ -36,7 +37,7 @@ class LoginView extends StatelessWidget {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     const SizedBox(height: 20),
-                    Text('Welcome Back 👋',
+                    const Text('Welcome Back 👋',
                       style: TextStyle(
                         color: Colors.black,
                         fontSize:24,
@@ -67,8 +68,8 @@ class LoginView extends StatelessWidget {
                     const SizedBox(height: 10),
 
                     ////password input
-                    TextFormGlobal(controller: passwordController,
-                        text: AutofillHints.password, textInputType: TextInputType.text,
+                    TextForm(controller: passwordController,
+                        text:'password', textInputType: TextInputType.text,
                         obscure: true, inputType: TextInputType.text,
                         ),
 

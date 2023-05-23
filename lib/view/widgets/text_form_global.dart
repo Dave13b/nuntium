@@ -15,6 +15,7 @@ class TextFormGlobal extends StatelessWidget {
   final TextInputType inputType;
   final bool obscure;
 
+
   @override
   Widget build(BuildContext context) {
     return  Container(
@@ -50,7 +51,6 @@ class TextFormGlobal extends StatelessWidget {
           ),
         ),
       ),
-
     );
   }
 }

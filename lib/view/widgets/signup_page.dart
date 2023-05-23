@@ -3,27 +3,30 @@ import 'package:nuntium/utils/global_colors.dart';
 import 'package:nuntium/view/login_view.dart';
 import 'package:nuntium/view/widgets/signup_button.dart';
 import 'package:nuntium/view/widgets/social_login.dart';
+import 'package:nuntium/view/widgets/text_form.dart';
 import 'package:nuntium/view/widgets/text_form_global.dart';
-
-import 'button_global.dart';
-import 'forgot_password.dart';
 
 
 void main() {
-  runApp(MaterialApp(
+  runApp(const MaterialApp(
     home:  SignUpPage(),
   ));
 }
 
 class SignUpPage extends StatefulWidget {
+  const SignUpPage({Key? key}) : super(key: key);
+
   @override
   State createState() =>  SignUpPageState();
+
 }
 
 class SignUpPageState extends State<SignUpPage> {
-  final TextEditingController emailController = TextEditingController();
   final TextEditingController userController = TextEditingController();
+  final TextEditingController emailController = TextEditingController();
   final TextEditingController passwordController = TextEditingController();
+  final TextEditingController repeatPasswordController = TextEditingController();
+
 
   @override
   Widget build(BuildContext context) {
@@ -48,7 +51,7 @@ class SignUpPageState extends State<SignUpPage> {
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         const SizedBox(height: 20),
-                        Text('Welcome to Nuntium 👋',
+                        const Text('Welcome to Nuntium 👋',
                           style: TextStyle(
                             color: Colors.black,
                             fontSize:24,
@@ -68,8 +71,8 @@ class SignUpPageState extends State<SignUpPage> {
                         ),
                         const SizedBox(height: 10),
                         ////email input++
-                        TextFormGlobal(
-                          controller: emailController,
+                        UserTextForm(
+                          controller: userController,
                           text: 'Username',
                           obscure: false,
                           textInputType: TextInputType.emailAddress,
@@ -88,7 +91,7 @@ class SignUpPageState extends State<SignUpPage> {
                         const SizedBox(height: 10),
 
                         ////password input
-                        TextFormGlobal(controller: passwordController,
+                        TextForm(controller: passwordController,
                           text: 'Password',
                           textInputType: TextInputType.text,
                           obscure: true,
@@ -96,7 +99,7 @@ class SignUpPageState extends State<SignUpPage> {
                         ),
                         const SizedBox(height: 10),
 
-                        TextFormGlobal(controller: passwordController,
+                        TextForm(controller: repeatPasswordController,
                           text: 'Repeat Password',
                           textInputType: TextInputType.text,
                           obscure: true,
