@@ -3,7 +3,7 @@ import 'package:avatar_glow/avatar_glow.dart';
 import 'package:flutter/material.dart';
 import 'package:nuntium/utils/global_colors.dart';
 import 'package:nuntium/view/login_view.dart';
-import 'package:nuntium/view/widgets/onboarding_screen.dart';
+import 'package:nuntium/view/intro_screens/onboarding_screen.dart';
 
 class SplashView extends StatelessWidget {
   const SplashView({Key? key}) : super(key: key);

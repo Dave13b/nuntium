@@ -36,8 +36,6 @@ class IntroPage2 extends StatelessWidget {
                 ),
               ),
               const SizedBox(height: 30),
-
-
             ],
           ),
         ),

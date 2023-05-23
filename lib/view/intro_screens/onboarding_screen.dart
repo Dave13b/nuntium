@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:nuntium/view/intro_screens/intro_page_1.dart';
 import 'package:nuntium/view/login_view.dart';
+import 'package:nuntium/view/welcome_screen.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 
-import '../intro_screens/intro_page_2.dart';
-import '../intro_screens/intro_page_3.dart';
+import 'intro_page_2.dart';
+import 'intro_page_3.dart';
 
 class OnboardingScreen extends StatefulWidget {
   const OnboardingScreen({Key? key}) : super(key: key);
@@ -68,7 +69,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                 ?GestureDetector(
                   onTap: () {
                     Navigator.push(context, MaterialPageRoute(builder: (context){
-                      return LoginView();
+                      return const WelcomeScreen();
                     },
                     ),
                     );
