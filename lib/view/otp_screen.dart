@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_otp_text_field/flutter_otp_text_field.dart';
 import 'package:nuntium/utils/global_colors.dart';
+import 'package:nuntium/view/widgets/new_password.dart';
 
 class OTPScreen extends StatelessWidget {
   const OTPScreen({Key? key}) : super(key: key);
@@ -39,7 +40,15 @@ class OTPScreen extends StatelessWidget {
             const SizedBox(height: 20.0),
             SizedBox(
               width: double.infinity,
-              child: ElevatedButton(onPressed: () {},
+              child: ElevatedButton(onPressed: () {
+
+                Navigator.push(context, MaterialPageRoute(builder: (context) {
+                  return NewPassword();
+
+                },
+                ),
+                );
+              },
                   child:  Text(
                       'Confirm',
                     ),

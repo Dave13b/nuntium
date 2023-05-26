@@ -114,16 +114,14 @@ class ForgotPasswordPageState extends State<ForgotPasswordPage> {
                     BoxShadow(
                       color: Colors.black.withOpacity(0.1),
                       blurRadius: 10,
-                    )
-                  ]
+                    ),
+                  ],
               ),
             ),
-
-
           ],
         ),
       ),
     );
-  }
 
+  }
 }
