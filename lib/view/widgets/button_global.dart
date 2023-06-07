@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:nuntium/utils/global_colors.dart';
+import 'package:nuntium/view/category_screen.dart';
 
 class ButtonGlobal extends StatelessWidget {
   const ButtonGlobal({Key? key}) : super(key: key);
@@ -8,7 +9,11 @@ class ButtonGlobal extends StatelessWidget {
   Widget build(BuildContext context) {
     return  InkWell(
       onTap: () {
-        print('login');
+        Navigator.push(context, MaterialPageRoute(builder: (context){
+          return const CategoriesScreen();
+        },
+        ),
+        );
       },
       child: Container(
         alignment: Alignment.center,

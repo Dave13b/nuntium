@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_otp_text_field/flutter_otp_text_field.dart';
-import 'package:nuntium/utils/global_colors.dart';
 import 'package:nuntium/view/widgets/new_password.dart';
 
 class OTPScreen extends StatelessWidget {
@@ -49,7 +48,7 @@ class OTPScreen extends StatelessWidget {
                 ),
                 );
               },
-                  child:  Text(
+                  child:  const Text(
                       'Confirm',
                     ),
                   ),

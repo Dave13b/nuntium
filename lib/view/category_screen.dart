@@ -1,75 +1,118 @@
 import 'package:flutter/material.dart';
 
-class CategoriesScreen extends StatefulWidget {
-  @override
-  _CategoriesScreenState createState() => _CategoriesScreenState();
-}
-
-class _CategoriesScreenState extends State<CategoriesScreen> {
-  List<Category> categories = [
-    Category(
-      name: '🏈   Sports', imageUrl: '',
-    ),
-    Category(
-      name: '⚖️   Politics',
-      imageUrl: '',
-    ),
-    Category(
-      name: '🌞   Life',
-      imageUrl: '',
-    ),
-    Category(
-      name: '🐻   Animals',
-      imageUrl: '',
-    ),
-    Category(
-      name: '🌴   Nature',
-      imageUrl: '',
-    ),
-
-    Category(
-      name: '🍔   Food',
-      imageUrl: '',
-    ),
-    Category(
-      name: '🎨   Art',
-      imageUrl: '',
-    ),
-    Category(
-      name: '📜   History',
-      imageUrl: '',
-    ),
-    Category(
-      name: '👗   Fashion',
-      imageUrl: '',
-    ),
-  ];
+class CategoriesScreen extends StatelessWidget {
+  const CategoriesScreen({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
+    return  Scaffold(
       appBar: AppBar(
         title: Text('Categories'),
       ),
-      body: ListView.builder(
-        itemCount: categories.length,
-        itemBuilder: (context, index) {
-          return ListTile(
-            leading: Image.asset(categories[index].imageUrl),
-            title: Text(categories[index].name),
-            onTap: () {
-              Navigator.pushNamed(context, '/category/${categories[index].name}');
-            },
-          );
-        },
+      body: GridView.count(
+        crossAxisCount: 2,
+        children: [
+          Padding(
+            padding: const EdgeInsets.fromLTRB(30, 70,30, 70),
+            child: Container(
+              alignment: Alignment.center,
+              child: Text('🏈   Sports'),
+              color: Colors.grey[200],
+            ),
+          ),
+
+          Padding(
+            padding: const EdgeInsets.fromLTRB(30, 70, 30, 70),
+            child: Container(
+              alignment: Alignment.center,
+              child: Text('⚖️   Politics'),
+              color: Colors.grey[200],
+            ),
+          ),
+          Padding(
+            padding: const EdgeInsets.fromLTRB(30, 70, 30, 70),
+            child: Container(
+              alignment: Alignment.center,
+              child: Text('🌞   Life'),
+              color: Colors.grey[200],
+            ),
+          ),
+          Padding(
+            padding: const EdgeInsets.fromLTRB(30, 70, 30, 70),
+            child: Container(
+              alignment: Alignment.center,
+              child: Text('🎮   Gaming'),
+              color: Colors.grey[200],
+            ),
+          ),
+          Padding(
+            padding: const EdgeInsets.fromLTRB(30, 70, 30, 70),
+            child: Container(
+              alignment: Alignment.center,
+              child: Text('🐻   Animals'),
+              color: Colors.grey[200],
+            ),
+          ),
+          Padding(
+            padding: const EdgeInsets.fromLTRB(30, 70, 30, 70),
+            child: Container(
+              alignment: Alignment.center,
+              child: Text('🌴   Nature'),
+              color: Colors.grey[200],
+            ),
+          ),
+          Padding(
+            padding: const EdgeInsets.fromLTRB(30, 70, 30, 70),
+            child: Container(
+              alignment: Alignment.center,
+              child: Text('🍔   Food'),
+              color: Colors.grey[200],
+            ),
+          ),
+          Padding(
+            padding: const EdgeInsets.fromLTRB(30, 70, 30, 70),
+            child: Container(
+              alignment: Alignment.center,
+              child: Text('🎨   Art'),
+              color: Colors.grey[200],
+            ),
+          ),
+          Padding(
+            padding: const EdgeInsets.fromLTRB(30, 70, 30, 70),
+            child: Container(
+              alignment: Alignment.center,
+              child: Text('📜   History'),
+              color: Colors.grey[200],
+            ),
+          ),
+          Padding(
+            padding: const EdgeInsets.fromLTRB(30, 70, 30, 70),
+            child: Container(
+              alignment: Alignment.center,
+              child: Text('👗   Fashion'),
+              color: Colors.grey[200],
+            ),
+          ),
+          Padding(
+            padding: const EdgeInsets.fromLTRB(30, 70, 30, 70),
+            child: Container(
+              alignment: Alignment.center,
+              child: Text('😷   Covid-19'),
+              color: Colors.grey[200],
+            ),
+          ),
+          Padding(
+            padding: const EdgeInsets.fromLTRB(30, 70, 30, 70),
+            child: Container(
+              alignment: Alignment.center,
+              child: Text('⚔️   Middle East'),
+              color: Colors.grey[200],
+            ),
+          ),
+
+
+        ],
       ),
     );
   }
-}
-
-class Category {
-  final String name;
-  final String imageUrl;
-
-  Category({required this.name, required this.imageUrl});
 }
