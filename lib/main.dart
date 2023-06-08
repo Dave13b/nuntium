@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:nuntium/view/splash_view.dart';
+import 'package:http/http.dart' as http;
 
 
 

@@ -69,7 +69,7 @@ class LoginView extends StatelessWidget {
 
                     ////password input
                     TextForm(controller: passwordController,
-                        text:'password', textInputType: TextInputType.text,
+                        text:'Password', textInputType: TextInputType.text,
                         obscure: true, inputType: TextInputType.text,
                         ),
 

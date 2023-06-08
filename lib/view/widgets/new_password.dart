@@ -1,14 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:nuntium/utils/global_colors.dart';
-import 'package:nuntium/view/login_view.dart';
 import 'package:nuntium/view/otp_screen.dart';
-import 'package:nuntium/view/widgets/button_global.dart';
-import 'package:nuntium/view/widgets/forgot_password.dart';
-import 'package:nuntium/view/widgets/signup_page.dart';
-import 'package:nuntium/view/widgets/social_login.dart';
 import 'package:nuntium/view/widgets/text_form.dart';
-import 'package:nuntium/view/widgets/text_form_global.dart';
-
 import '../forgot_password_button.dart';
 
 class NewPassword extends StatelessWidget {

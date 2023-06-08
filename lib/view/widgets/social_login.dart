@@ -61,7 +61,7 @@ class SocialLogin extends StatelessWidget {
                   ],
                 ),
                 child: Image.asset('assets/images/facebook.jpg',
-                    height: 25),
+                    height: 35),
               ),
             ),
             const SizedBox(width: 15),

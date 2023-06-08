@@ -8,7 +8,7 @@ class ForgotPasswordButton extends StatelessWidget {
   Widget build(BuildContext context) {
     return  InkWell(
       onTap: () {
-        print('login');
+        print('confirm');
       },
       child: Container(
         alignment: Alignment.center,
